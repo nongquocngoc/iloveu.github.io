@@ -11,7 +11,6 @@ $(document).ready(function() {
 })
 
 function firstQuestion(){
-    
     $('.content').hide();
     Swal.fire({
         title: 'heloo baee iuu',
@@ -22,6 +21,8 @@ function firstQuestion(){
         background: '#fff url("img/iput-bg.jpg")',
         imageAlt: 'Custom image',
       }).then(function(){
+        var audio = new Audio('sound/bg.mp3');
+        audio.play();
         $('.content').show(200);
       })
 }
