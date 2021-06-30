@@ -40,12 +40,19 @@
     <!-- <video id="heroVideoBg" autoplay loop muted>
       <source type="video/mp4" src="./img/bg1.mp4">
   </video> -->
-  <video id="heroVideoBg" autoplay loop>
+  <video id="heroVideoBg" autoplay loop muted>
     <source type="video/mp4" src="./img/bg.mp4">
-	<source type="video/webm" src="./img/bg.webm" />
+	<source type="video/webm" src="./img/bg.webm"/>
 	<source type="video/mp4" src="./img/bg.m4v" />
 </video>
-    <!-- <audio src="./sound/sound.mp3" autoplay></audio> -->
+<!-- <iframe src="./sound/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe> -->
+<audio src="./sound/bg.mp3" id="my_audio" loop="loop"></audio>
+  <script type="text/javascript">
+    setTimeout(function(){
+      document.getElementById("my_audio").play();
+    },2000)
+  </script>
+  <!-- <audio  id="myAudio" src="./sound/sound.mp3" autoplay loop ></audio> -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
@@ -56,7 +63,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="js/myJs.js"></script>
-    <script>
+    <script>  
       $(document).ready(function(){
         $("#no").click(function(){
           $("#div3").fadeIn(100);
